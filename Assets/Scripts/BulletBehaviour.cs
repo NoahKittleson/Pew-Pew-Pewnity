@@ -14,6 +14,10 @@ public class BulletBehaviour : MonoBehaviour {
 		}
 	}
 
+	void onDestroy() {
+		Debug.Log ("Object Destroyed!");
+	}
+
 	// Use this for initialization
 	void Start () {
 		// Get the rigidbody component

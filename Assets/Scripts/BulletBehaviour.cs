@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BulletBehaviour : MonoBehaviour {
 
-	public int speed = 4;
+	public int speed = 10;
 	public Rigidbody2D r2d;
 
 	void OnCollisionEnter2D(Collision2D coll) {

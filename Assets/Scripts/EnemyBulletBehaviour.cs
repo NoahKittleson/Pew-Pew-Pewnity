@@ -3,15 +3,13 @@ using System.Collections;
 
 public class EnemyBulletBehaviour : MonoBehaviour {
 
-	public int speed = -20;
+	public int speed = -5;
 	public Rigidbody2D r2d;
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag == "asteroid") {
+		if (coll.gameObject.tag == "asteroid" || coll.gameObject.tag == "player") {
 			Destroy(gameObject);
-		} else if (coll.gameObject.tag == "player") {
-			Destroy(coll.gameObject);
-		}
+		} 
 	}
 
 	// Use this for initialization

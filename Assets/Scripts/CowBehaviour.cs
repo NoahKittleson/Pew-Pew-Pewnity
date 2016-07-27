@@ -16,6 +16,10 @@ public class CowBehaviour : MonoBehaviour {
 	}
 
     void FireBullet () {
-		Instantiate(bullet, new Vector2(transform.position.x - 2,transform.position.y), Quaternion.identity);
+		Instantiate(bullet, new Vector2(transform.position.x - 1,transform.position.y), Quaternion.identity);
     }
+
+	void OnBecameInvisible() {
+		Destroy(gameObject);
+	}
 }

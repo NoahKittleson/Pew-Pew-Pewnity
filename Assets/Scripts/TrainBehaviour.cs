@@ -28,7 +28,7 @@ public class TrainBehaviour : MonoBehaviour {
 			// Create a new bullet at “transform.position” 
 			// Which is the current position of the ship
 			// Quaternion.identity = add the bullet with no rotation
-			Instantiate (bullet, new Vector2 (transform.position.x + 2, transform.position.y), Quaternion.identity);
+			Instantiate (bullet, new Vector2 (transform.position.x + 1, transform.position.y), Quaternion.identity);
 		}
 	}
 }

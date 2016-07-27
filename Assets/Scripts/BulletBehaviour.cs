@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BulletBehaviour : MonoBehaviour {
 
-	public int speed = 20;
+	public int speed = 4;
 	public Rigidbody2D r2d;
 
 	void OnCollisionEnter2D(Collision2D coll) {
@@ -14,9 +14,8 @@ public class BulletBehaviour : MonoBehaviour {
 		}
 	}
 
-	// Use this for initialization
+
 	void Start () {
-		// Get the rigidbody component
 		r2d = GetComponent<Rigidbody2D>();
 
 		r2d.velocity = new Vector2(speed, 0);

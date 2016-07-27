@@ -7,3 +7,4 @@
 *.csproj
 *.orig
 *.sublime-workspace
+.DS_Store

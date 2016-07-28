@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gameOver) {
-			if (Input.GetKeyDown (KeyCode.R)) {
+			if (Input.GetKeyDown (KeyCode.DownArrow)) {
 				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 			}
 		}
@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour {
 			gameOverText.text = "YOU ARE NOW DEAD";
 			flip = false;
 		} else {
-			gameOverText.text = "PRESS R TO RESTART";
+			gameOverText.text = "PRESS DOWN TO RESTART";
 			flip = true;
 		}
 	}

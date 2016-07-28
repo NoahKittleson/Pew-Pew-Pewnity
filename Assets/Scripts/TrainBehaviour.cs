@@ -1,18 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Timers;
+
 public class TrainBehaviour : MonoBehaviour {
 
 	public GameObject bullet;
 	public Rigidbody2D rb;
 	public float currentSpeed;
+	public GameController gameController;
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		currentSpeed = rb.velocity.sqrMagnitude;
 		if (coll.gameObject.tag == "asteroid" && currentSpeed > 20) {
-			Destroy(coll.gameObject);
+			Destroy (coll.gameObject);
 		} else if (coll.gameObject.tag == "enemy") {
-			Destroy(coll.gameObject);
+			Destroy (coll.gameObject);
+		} else if (coll.gameObject.tag == "enemyBullet") {
+			Destroy (coll.gameObject);
+			Destroy (gameObject);
+			gameController.setGameOver();
 		}
 	}
 

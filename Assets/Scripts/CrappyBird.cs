@@ -5,6 +5,11 @@ public class CrappyBird : MonoBehaviour {
 	public Rigidbody2D rb;
 	public float movespeed;
 	public float jumpheight;
+
+	public bool moveRight;
+	public bool moveLeft;
+	public bool moveDown;
+	public bool moveUp;
 	//public Collider2D collider;
 
 	void Start () {
@@ -13,6 +18,21 @@ public class CrappyBird : MonoBehaviour {
 	}
 
 	void Update () {
+
+		if (moveRight)
+		{
+			rb.velocity = new Vector2(movespeed, rb.velocity.y);
+		}
+		if (moveUp) {
+			rb.AddForce (new Vector2 (0, jumpheight), ForceMode2D.Impulse);
+		}
+		if (moveDown) {
+			//nothing yet....
+		}
+		if (moveLeft)
+		{
+			rb.velocity = new Vector2(-movespeed, rb.velocity.y);
+		}
 
 		if (Input.GetKey(KeyCode.LeftArrow))
 		{

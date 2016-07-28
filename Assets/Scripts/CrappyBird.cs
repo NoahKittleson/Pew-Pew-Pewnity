@@ -19,31 +19,34 @@ public class CrappyBird : MonoBehaviour {
 
 	void Update () {
 
-		if (moveRight)
-		{
-			rb.velocity = new Vector2(movespeed, rb.velocity.y);
-		}
-		if (moveUp) {
-			rb.AddForce (new Vector2 (0, jumpheight), ForceMode2D.Impulse);
-		}
-		if (moveDown) {
-			//nothing yet....
-		}
-		if (moveLeft)
-		{
-			rb.velocity = new Vector2(-movespeed, rb.velocity.y);
-		}
+//		if (moveRight)
+//		{
+//			rb.velocity = new Vector2(movespeed, rb.velocity.y);
+//		}
+//		if (moveUp) {
+//			rb.AddForce (new Vector2 (0, jumpheight), ForceMode2D.Impulse);
+//		}
+//		if (moveDown) {
+//			//nothing yet....
+//		}
+//		if (moveLeft)
+//		{
+//			rb.velocity = new Vector2(-movespeed, rb.velocity.y);
+//		}
 
-		if (Input.GetKey(KeyCode.LeftArrow))
+		if (Input.GetKey(KeyCode.LeftArrow) || moveLeft)
 		{
 			rb.velocity = new Vector2(rb.velocity.x - movespeed, rb.velocity.y);
 		}
-		if (Input.GetKey(KeyCode.RightArrow))
+		if (Input.GetKey(KeyCode.RightArrow) || moveRight)
 		{
 			rb.velocity = new Vector2(rb.velocity.x + movespeed, rb.velocity.y);
 		}
-		if (Input.GetKey (KeyCode.UpArrow)) {
+		if (Input.GetKey (KeyCode.UpArrow) || moveUp) {
 				rb.AddForce (new Vector2 (0, jumpheight), ForceMode2D.Impulse);
+		}
+		if (Input.GetKey (KeyCode.DownArrow) || moveDown) {
+			rb.AddForce (new Vector2 (rb.velocity.x, rb.velocity.y - jumpheight));
 		}
 	}
 }

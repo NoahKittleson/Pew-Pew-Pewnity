@@ -8,17 +8,23 @@ public class TrainBehaviour : MonoBehaviour {
 	public Rigidbody2D rb;
 	public float currentSpeed;
 	public GameController gameController;
+	public int health;
+
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		currentSpeed = rb.velocity.sqrMagnitude;
 		if (coll.gameObject.tag == "asteroid" && currentSpeed > 20) {
 			Destroy (coll.gameObject);
+		} else if (coll.gameObject.tag == "SpaceCow" && currentSpeed > 20) {
+			Destroy(coll.gameObject);
 		} else if (coll.gameObject.tag == "enemy") {
 			Destroy (coll.gameObject);
 		} else if (coll.gameObject.tag == "enemyBullet") {
-			Destroy (coll.gameObject);
-			Destroy (gameObject);
-			gameController.setGameOver();
+			health--;
+			if (health <= 0) {
+				Destroy(gameObject);
+				gameController.setGameOver();
+			}
 		}
 	}
 
@@ -26,6 +32,7 @@ public class TrainBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+		health = 10;
 	}
 
 	// Update is called once per frame

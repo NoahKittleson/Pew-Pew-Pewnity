@@ -43,10 +43,10 @@ public class CrappyBird : MonoBehaviour {
 			rb.velocity = new Vector2(rb.velocity.x + movespeed, rb.velocity.y);
 		}
 		if (Input.GetKey (KeyCode.UpArrow) || moveUp) {
-				rb.AddForce (new Vector2 (0, jumpheight), ForceMode2D.Impulse);
+			rb.AddForce (new Vector2 (0, jumpheight), ForceMode2D.Impulse);
 		}
 		if (Input.GetKey (KeyCode.DownArrow) || moveDown) {
-			rb.AddForce (new Vector2 (rb.velocity.x, rb.velocity.y - jumpheight));
+			rb.AddForce (new Vector2 (0, -jumpheight), ForceMode2D.Impulse);
 		}
 	}
 }

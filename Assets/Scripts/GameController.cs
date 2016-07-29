@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 	public Text gameOverText;
 	public bool gameOver;
 	public Text scoreText;
+	public Image gameOverImage;
 	public int score;
 
 	private bool flip;
@@ -18,6 +19,7 @@ public class GameController : MonoBehaviour {
 		flip = true;
 		score = 0;
 		increaseScore (0);
+		gameOverImage.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -30,8 +32,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void setGameOver() {
-		InvokeRepeating("setGameOverText", 0, 3);
-		gameOver = true;
+		InvokeRepeating("setGameOverText", 0, 1);
+		gameOver = true;	
+		gameOverImage.enabled = true;
 	}
 
 	public void increaseScore(int points) {
@@ -41,7 +44,7 @@ public class GameController : MonoBehaviour {
 
 	private void setGameOverText() {
 		if (flip) {
-			gameOverText.text = "YOU ARE NOW DEAD";
+			gameOverText.text = "";
 			flip = false;
 		} else {
 			gameOverText.text = "PRESS DOWN TO RESTART";

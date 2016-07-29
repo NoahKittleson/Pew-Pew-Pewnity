@@ -33,11 +33,16 @@ public class TrainBehaviour : MonoBehaviour {
 		}
 	}
 
+	void OnBecameInvisible() {
+		Destroy(gameObject);
+		gameController.setGameOver();
+	}	
+
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
-		health = 10;
+		health = 1;
 	}
 
 	// Update is called once per frame

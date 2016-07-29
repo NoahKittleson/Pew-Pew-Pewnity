@@ -29,6 +29,11 @@ The goal is to see how long you can survive in space battling cows and Cowthulu 
 * Touch buttons that allow movement of avatar
 * Avoid asteroids and oncoming sheep to prevent game over
 * See how many cows can be defeated before you are overwhelmed
+ 
+## Score
+* Cow : 1 point
+* Asteroid : 5 points
+* Cowthulu: 10 points
 
 ## Music
 

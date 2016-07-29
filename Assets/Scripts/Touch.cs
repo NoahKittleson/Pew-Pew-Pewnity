@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Touch : MonoBehaviour
 {
 	private CrappyBird player;
+	public GameController gameController;
 
 
 	void Start()
@@ -22,6 +24,9 @@ public class Touch : MonoBehaviour
 		Debug.Log ("down arrow hit");
 		player.moveUp = false;
 		player.moveDown = true;
+		if (gameController.gameOver) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		}
 	}
 	public void UpArrow()
 	{

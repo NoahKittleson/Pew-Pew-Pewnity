@@ -11,7 +11,7 @@ public class Spawning : MonoBehaviour {
 	void Start () {
 		InvokeRepeating("Spawn", 1, 0.5f);
 		InvokeRepeating("SpawnSpaceCow", 10, 10);
-		InvokeRepeating("SpawnAsteroid", 12, 20);
+		InvokeRepeating("SpawnAsteroid", 0, 5);
 	}
 
 	// Update is called once per frame

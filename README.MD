@@ -10,6 +10,7 @@ A Unity Android app where the player controls a train and battles the cows and t
 * Open project folder
 * Connect a device to computer
 * Drag APK into the "Downloads" folder on the device
+* Alternative: Select link and download (https://drive.google.com/open?id=0B2Beh-jnAuHTZnU0ekw4SXZ4YU0)
 
 ## Technologies Used
 

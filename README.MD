@@ -1,20 +1,21 @@
 # Pew Pew Pewnity
 
-A Unity Android app where the player controls a train and battles the cows and they tumble through space.  Using the controls
+
+A Unity Android app where the player controls a train and battles the cows and they tumble through space.  Using the controls, you must knock out the cows and avoid the sheep long enough to defeat the space overlord, Cowthulu. Brave forward, you crazy train.
 
 
 ## Installation
 
 * git clone [this repository](https://github.com/NoahKittleson/Pew-Pew-Pewnity.git).
-* Open Android Studios
-* Connect a device and upload the app
+* Open project folder
+* Connect a device to computer
+* Drag APK into the "Downloads" folder on the device
 
 ## Technologies Used
 
 * Unity
 * C#
 * Piskel
-* Audacity
 
 ## Description
 
@@ -22,11 +23,24 @@ Wanting to create a game and experiment with different controls and programs out
 
 The goal is to see how long you can survive in space battling cows and Cowthulu in your space train, the Pew Pew Express, as you dip, dive and dodge oncoming sheep.  How long will you last in this interstellar brawl to be the top of the food chain.
 
+## Features
 
+* Score to record number of cows eliminated
+* Touch buttons that allow movement of avatar
+* Avoid asteroids and oncoming sheep to prevent game over
+* See how many cows can be defeated before you are overwhelmed
+
+## Music
+
+* Extreme Action (http://www.bensound.com/)
 
 
 ### License
 
 *This software is licensed under the MIT license.  See below for more details on licensing.*
+
+### Acknowledgment
+
+Thank you for all that you have taught us.
 
 Copyright (c) 2016 **_John Dow_** **_Kendra Dunham_** **_Noah Kittleson_** **_Andrew Russo_**

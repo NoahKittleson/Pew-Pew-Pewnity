@@ -42,7 +42,7 @@ public class TrainBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
-		health = 1;
+		health = 10;
 	}
 
 	// Update is called once per frame

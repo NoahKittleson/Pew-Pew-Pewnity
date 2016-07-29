@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 	public Text gameOverText;
 	public bool gameOver;
+	public Text scoreText;
+	public int score;
 
 	private bool flip;
 
@@ -14,6 +16,8 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		gameOverText.text = "";
 		flip = true;
+		score = 0;
+		increaseScore (0);
 	}
 	
 	// Update is called once per frame
@@ -28,6 +32,11 @@ public class GameController : MonoBehaviour {
 	public void setGameOver() {
 		InvokeRepeating("setGameOverText", 0, 3);
 		gameOver = true;
+	}
+
+	public void increaseScore(int points) {
+		score += points;
+		scoreText.text = "Score: " + score;
 	}
 
 	private void setGameOverText() {

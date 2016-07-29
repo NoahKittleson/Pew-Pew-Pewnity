@@ -15,12 +15,17 @@ public class TrainBehaviour : MonoBehaviour {
 		currentSpeed = rb.velocity.sqrMagnitude;
 		if (coll.gameObject.tag == "asteroid" && currentSpeed > 20) {
 			Destroy (coll.gameObject);
+			gameController.increaseScore (5);
 		} else if (coll.gameObject.tag == "SpaceCow" && currentSpeed > 20) {
 			Destroy(coll.gameObject);
+			gameController.increaseScore (10);
 		} else if (coll.gameObject.tag == "enemy") {
 			Destroy (coll.gameObject);
+			gameController.increaseScore (1);
 		} else if (coll.gameObject.tag == "enemyBullet") {
+			Debug.Log ("Health deducted");
 			health--;
+			Destroy (coll.gameObject);
 			if (health <= 0) {
 				Destroy(gameObject);
 				gameController.setGameOver();

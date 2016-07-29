@@ -8,9 +8,7 @@ public class EnemyBulletBehaviour : MonoBehaviour {
 	public Rigidbody2D r2d;
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag == "asteroid" || coll.gameObject.tag == "player") {
-			Destroy(gameObject);
-		} else {
+		if (coll.gameObject.tag == "asteroid") {
 			Destroy(gameObject);
 		}
 	}
